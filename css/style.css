@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+header div.header-container {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  display: flex;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: white;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+header div.header-container .catch-phrase {
+  opacity: 0.7;
+}
+header div.header-container div.logo-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+header div.header-container nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+header div.header-container nav .nav-mobile-logo {
+  display: none;
+}
+header div.header-container nav a {
+  cursor: pointer;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  text-wrap: nowrap;
+  padding: 5px 10px;
+}
+header div.header-container nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 300ms ease-out;
+}
+header div.header-container nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+header div.header-container div.socials {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+header div.header-container div.socials img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transition: ease-in-out 0.1s;
+  cursor: pointer;
+}
+header div.header-container div.socials img:hover {
+  width: 23px;
+  height: 23px;
+}
+header div.header-container .mobile-trigger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15px;
+  width: 18px;
+  margin: auto 0;
+}
+header div.header-container .mobile-trigger div {
+  width: 100%;
+  border-bottom: black 3px solid;
+}
+header div.header-container .move {
+  left: 0;
+}
+@media (width < 800px) {
+  header div.header-container div.logo-container {
+    width: auto;
+    margin: auto 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  header div.header-container div.socials {
+    display: none;
+  }
+  header div.header-container nav {
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    left: -100%;
+    background-color: white;
+    height: 100%;
+    transition: all 0.1s linear;
+  }
+  header div.header-container nav .nav-mobile-logo {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  header div.header-container nav a {
+    padding: 20px;
+    transition: all 0.1s linear;
+  }
+  header div.header-container nav a::after {
+    background: none;
+  }
+  header div.header-container nav a:hover {
+    color: white;
+    background-color: black;
+  }
+  header div.header-container nav span.close {
+    cursor: pointer;
+    margin-left: auto;
+    font-weight: bold;
+  }
+  header div.header-container .mobile-trigger {
+    cursor: pointer;
+    display: flex;
+    margin-right: auto;
+  }
+}
+header div.main-header {
+  background-image: url("https://s0.wp.com/wp-content/themes/premium/hevor/assets/images/hevor_hero-scaled.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px;
+  width: 100%;
+  height: 100svh;
+  position: relative;
+}
+header div.main-header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+header div.main-header div.text-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+header div.main-header div.text-container * {
+  z-index: 2;
+}
+header div.main-header div.text-container h1 {
+  font-size: 55px;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+header div.main-header div.text-container span {
+  color: white;
+  font-size: 20px;
+}
+header div.main-header div.text-container button {
+  color: white;
+  background-color: transparent;
+  padding: 15px 25px;
+}
+header div.main-header div.text-container button:hover {
+  color: white;
+  background-color: black;
+}
+
+main section.photos {
+  padding: 50px 0;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+main section.photos div {
+  width: 30%;
+}
+main section.photos div img {
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+  height: 70%;
+  width: 100%;
+}
+main section.photos div div {
+  width: 100%;
+}
+main section.photos div div h2 {
+  padding: 10px 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+main section.photos div div article {
+  opacity: 0.8;
+  width: 100%;
+}
+@media (width < 800px) {
+  main section.photos {
+    flex-direction: column;
+  }
+  main section.photos div {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+main section.testemunhos {
+  width: 100%;
+  padding: 40px;
+  margin: 0 auto;
+  background-color: #f4f2f2;
+}
+main section.testemunhos h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+}
+main section.testemunhos .testemunhos-container {
+  display: flex;
+}
+@media (width < 800px) {
+  main section.testemunhos .testemunhos-container {
+    flex-direction: column;
+  }
+}
+main section.testemunhos .testemunhos-container div {
+  padding: 10px 0;
+}
+main section.testemunhos .testemunhos-container div h1 {
+  font-family: "Space Grotesk";
+}
+main section.testemunhos .testemunhos-container div article {
+  font-size: 24px;
+  opacity: 0.8;
+}
+main section.testemunhos .testemunhos-container div img {
+  border: 2px solid black;
+  object-fit: cover;
+  object-position: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+main section.testemunhos .testemunhos-container div span {
+  font-style: italic;
+  margin: 10px;
+}
+main section.blog {
+  width: 90%;
+  margin: 50px auto;
+}
+main section.blog div.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section.blog div.title-container h1 {
+  font-weight: bold;
+}
+main section.blog div.title-container span {
+  text-decoration: underline;
+  font-style: italic;
+  cursor: pointer;
+}
+main section.blog div.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 15px;
+}
+main section.blog div.cards-container .card {
+  border: none;
+}
+main section.blog div.cards-container .card span {
+  margin: 20px 0;
+  font-weight: bold;
+}
+main section.blog div.cards-container .card h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+main section.blog div.cards-container .card article {
+  opacity: 0.8;
+}
+main section.call-action {
+  height: 30rem;
+  background-image: url("https://s0.wp.com/wp-content/themes/premium/hevor/assets/images/banner_image-scaled.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+main section.call-action div.action-container {
+  width: 80%;
+  margin: 0 auto;
+}
+main section.call-action div.action-container h1 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main section.call-action div.action-container button {
+  width: 120px;
+  padding: 10px 20px;
+}
+
+footer {
+  position: relative;
+  padding: 20px 0;
+  background-color: #131313;
+  color: white;
+}
+footer div.footer-container {
+  width: 90%;
+  margin: 0 auto;
+}
+footer div.footer-container div.info-container {
+  display: flex;
+  gap: 20px;
+}
+footer div.footer-container div.info-container .header-footer-container {
+  width: 50%;
+  margin-bottom: 20px;
+}
+footer div.footer-container div.info-container .header-footer-container span {
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.2s ease-in-out;
+}
+footer div.footer-container div.info-container .header-footer-container span:hover {
+  letter-spacing: 4px;
+  text-decoration: underline;
+  color: yellow;
+}
+footer div.footer-container div.info-container .contact-container {
+  width: 50%;
+  display: flex;
+}
+footer div.footer-container div.info-container .contact-container div {
+  margin-bottom: 25px;
+  padding: 10px;
+}
+footer div.footer-container div.info-container .contact-container div h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+footer div.footer-container div.info-container .contact-container div span {
+  display: block;
+  width: 100%;
+}
+footer div.footer-container div.info-container .contact-container div .direction {
+  margin-top: 10px;
+  width: fit-content;
+}
+footer div.footer-container div.info-container .contact-container div .direction:hover {
+  color: yellow;
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer div.footer-container div.info-container .contact-container div div.visit-us h4, footer div.footer-container div.info-container .contact-container div div.visit-us span {
+  text-align: right;
+}
+footer div.footer-container .bottom-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+footer div.footer-container .bottom-footer span {
+  font-size: 15px;
+}
+footer div.footer-container .bottom-footer div a {
+  text-decoration: none;
+  color: white;
+  transition: 0.1s linear all;
+}
+footer div.footer-container .bottom-footer div a:hover {
+  color: yellow;
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media (width < 800px) {
+  footer div.footer-container div.info-container {
+    display: block;
+  }
+  footer div.footer-container div.info-container .contact-container {
+    display: block;
+  }
+  footer div.footer-container div.info-container .contact-container div {
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  footer div.footer-container div.info-container .contact-container div h4 {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  footer div.footer-container div.info-container .contact-container div span {
+    display: block;
+    width: 100%;
+  }
+  footer div.footer-container div.info-container .contact-container div .direction {
+    margin-top: 10px;
+    width: fit-content;
+  }
+  footer div.footer-container div.info-container .contact-container div .direction:hover {
+    color: yellow;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
