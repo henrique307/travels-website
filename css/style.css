@@ -294,10 +294,17 @@ main section.blog div.title-container span {
 main section.blog div.cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   width: 100%;
   gap: 15px;
 }
+@media (width < 800px) {
+  main section.blog div.cards-container {
+    grid-template-columns: 1fr;
+  }
+}
 main section.blog div.cards-container .card {
+  margin-bottom: 20px;
   border: none;
 }
 main section.blog div.cards-container .card span {
@@ -387,7 +394,8 @@ footer div.footer-container div.info-container .contact-container div .direction
   text-decoration: underline;
   cursor: pointer;
 }
-footer div.footer-container div.info-container .contact-container div div.visit-us h4, footer div.footer-container div.info-container .contact-container div div.visit-us span {
+footer div.footer-container div.info-container .contact-container div div.visit-us h4,
+footer div.footer-container div.info-container .contact-container div div.visit-us span {
   text-align: right;
 }
 footer div.footer-container .bottom-footer {
