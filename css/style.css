@@ -317,6 +317,10 @@ main section.blog div.title-container h1 {
   font-size: var(--font-size--x-large);
   font-weight: bold;
 }
+main section.blog div.title-container a {
+  text-decoration: none;
+  color: black;
+}
 main section.blog div.title-container span {
   text-decoration: underline;
   font-style: italic;
