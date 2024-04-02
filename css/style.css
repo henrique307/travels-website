@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
-body {
-  font-family: "Times New Roman", Times, serif;
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+:root {
+  --font-size--small: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.353), 1.0625rem);
+  --font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.37), 1.25rem);
+  --font-size--large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.37), 2rem);
+  --font-size--x-large: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 0.741), 3rem);
+}
+
+* {
+  font-family: "Instrument Sans", "Times New Roman", Times, serif;
 }
 
 .logo {
@@ -8,6 +16,16 @@ body {
   letter-spacing: 2px;
   font-size: 20px;
   margin-right: 10px;
+}
+
+.highlight {
+  color: rgb(255, 255, 72);
+}
+
+a.logo-container,
+a.nav-mobile-logo-container {
+  text-decoration: none;
+  color: black;
 }
 
 header div.header-container {
@@ -24,10 +42,14 @@ header div.header-container {
 header div.header-container .catch-phrase {
   opacity: 0.7;
 }
-header div.header-container div.logo-container {
+header div.header-container a.logo-container {
   display: flex;
   align-items: center;
   width: 200px;
+}
+header div.header-container a.logo-container a {
+  text-decoration: none;
+  color: black;
 }
 header div.header-container nav {
   display: flex;
@@ -37,7 +59,7 @@ header div.header-container nav {
 header div.header-container nav .nav-mobile-logo {
   display: none;
 }
-header div.header-container nav a {
+header div.header-container nav .nav-item {
   cursor: pointer;
   position: relative;
   color: black;
@@ -45,7 +67,7 @@ header div.header-container nav a {
   text-wrap: nowrap;
   padding: 5px 10px;
 }
-header div.header-container nav a::after {
+header div.header-container nav .nav-item::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -57,9 +79,12 @@ header div.header-container nav a::after {
   transform-origin: bottom right;
   transition: transform 300ms ease-out;
 }
-header div.header-container nav a:hover::after {
+header div.header-container nav .nav-item:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+header div.header-container div.mobile-socials {
+  display: none !important;
 }
 header div.header-container div.socials {
   width: 200px;
@@ -95,7 +120,7 @@ header div.header-container .move {
   left: 0;
 }
 @media (width < 800px) {
-  header div.header-container div.logo-container {
+  header div.header-container a.logo-container {
     width: auto;
     margin: auto 0;
     position: absolute;
@@ -106,6 +131,10 @@ header div.header-container .move {
   header div.header-container div.socials {
     display: none;
   }
+  header div.header-container div.mobile-socials {
+    display: flex !important;
+    margin: 45% auto 0 auto;
+  }
   header div.header-container nav {
     position: fixed;
     flex-direction: column;
@@ -113,7 +142,7 @@ header div.header-container .move {
     width: 100%;
     left: -100%;
     background-color: white;
-    height: 100%;
+    height: 120%;
     transition: all 0.1s linear;
   }
   header div.header-container nav .nav-mobile-logo {
@@ -122,14 +151,14 @@ header div.header-container .move {
     align-items: center;
     width: 100%;
   }
-  header div.header-container nav a {
+  header div.header-container nav .nav-item {
     padding: 20px;
     transition: all 0.1s linear;
   }
-  header div.header-container nav a::after {
+  header div.header-container nav .nav-item::after {
     background: none;
   }
-  header div.header-container nav a:hover {
+  header div.header-container nav .nav-item:hover {
     color: white;
     background-color: black;
   }
@@ -160,7 +189,7 @@ header div.main-header .overlay {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 header div.main-header div.text-container {
@@ -174,13 +203,13 @@ header div.main-header div.text-container {
 header div.main-header div.text-container * {
   z-index: 2;
 }
-header div.main-header div.text-container h1 {
+header div.main-header div.text-container h1.header-title {
   font-size: 55px;
   color: white;
   margin-bottom: 10px;
   font-weight: bold;
 }
-header div.main-header div.text-container span {
+header div.main-header div.text-container span.header-description {
   color: white;
   font-size: 20px;
 }
@@ -217,10 +246,11 @@ main section.photos div div {
 }
 main section.photos div div h2 {
   padding: 10px 0;
-  font-size: 25px;
+  font-size: var(--font-size--large);
   font-weight: bold;
 }
 main section.photos div div article {
+  font-size: var(--font-size--medium);
   opacity: 0.8;
   width: 100%;
 }
@@ -242,7 +272,7 @@ main section.testemunhos {
 }
 main section.testemunhos h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: bold;
+  font-size: var(--font-size--x-large);
 }
 main section.testemunhos .testemunhos-container {
   display: flex;
@@ -253,7 +283,7 @@ main section.testemunhos .testemunhos-container {
   }
 }
 main section.testemunhos .testemunhos-container div {
-  padding: 10px 0;
+  padding: 10px;
 }
 main section.testemunhos .testemunhos-container div h1 {
   font-family: "Space Grotesk";
@@ -284,6 +314,7 @@ main section.blog div.title-container {
   align-items: center;
 }
 main section.blog div.title-container h1 {
+  font-size: var(--font-size--x-large);
   font-weight: bold;
 }
 main section.blog div.title-container span {
@@ -312,14 +343,19 @@ main section.blog div.cards-container .card span {
   font-weight: bold;
 }
 main section.blog div.cards-container .card h4 {
-  font-size: 20px;
+  font-size: var(--font-size--large);
   font-weight: 700;
 }
 main section.blog div.cards-container .card article {
+  font-size: var(--font-size--medium);
   opacity: 0.8;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 main section.call-action {
   height: 30rem;
+  position: relative;
   background-image: url("https://s0.wp.com/wp-content/themes/premium/hevor/assets/images/banner_image-scaled.jpg");
   background-position: center;
   background-size: cover;
@@ -330,15 +366,31 @@ main section.call-action {
 main section.call-action div.action-container {
   width: 80%;
   margin: 0 auto;
+  z-index: 0;
+}
+main section.call-action div.action-container div.overlay {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 main section.call-action div.action-container h1 {
   color: white;
   font-weight: 600;
   margin-bottom: 20px;
+  font-size: var(--font-size--x-large);
 }
 main section.call-action div.action-container button {
-  width: 120px;
-  padding: 10px 20px;
+  color: white;
+  background-color: transparent;
+  padding: 15px 25px;
+}
+main section.call-action div.action-container button:hover {
+  color: white;
+  background-color: black;
 }
 
 footer {
@@ -360,43 +412,26 @@ footer div.footer-container div.info-container .header-footer-container {
   margin-bottom: 20px;
 }
 footer div.footer-container div.info-container .header-footer-container span {
+  color: white;
+  text-decoration: none;
   cursor: pointer;
   margin-bottom: 10px;
   transition: 0.2s ease-in-out;
 }
 footer div.footer-container div.info-container .header-footer-container span:hover {
-  letter-spacing: 4px;
   text-decoration: underline;
   color: yellow;
 }
-footer div.footer-container div.info-container .contact-container {
+footer div.footer-container div.info-container .contato-container {
   width: 50%;
   display: flex;
+  justify-content: space-between;
 }
-footer div.footer-container div.info-container .contact-container div {
-  margin-bottom: 25px;
-  padding: 10px;
-}
-footer div.footer-container div.info-container .contact-container div h4 {
-  font-size: 20px;
-  font-weight: bold;
-}
-footer div.footer-container div.info-container .contact-container div span {
-  display: block;
-  width: 100%;
-}
-footer div.footer-container div.info-container .contact-container div .direction {
-  margin-top: 10px;
-  width: fit-content;
-}
-footer div.footer-container div.info-container .contact-container div .direction:hover {
-  color: yellow;
-  text-decoration: underline;
-  cursor: pointer;
-}
-footer div.footer-container div.info-container .contact-container div div.visit-us h4,
-footer div.footer-container div.info-container .contact-container div div.visit-us span {
+footer div.footer-container div.info-container .contato-container .visit-us {
   text-align: right;
+}
+footer div.footer-container div.info-container .contato-container .visit-us .direction {
+  margin-top: 15px;
 }
 footer div.footer-container .bottom-footer {
   display: flex;
@@ -418,31 +453,19 @@ footer div.footer-container .bottom-footer div a:hover {
 }
 @media (width < 800px) {
   footer div.footer-container div.info-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
-  footer div.footer-container div.info-container .contact-container {
-    display: block;
-  }
-  footer div.footer-container div.info-container .contact-container div {
-    padding: 0;
-    margin-bottom: 25px;
-  }
-  footer div.footer-container div.info-container .contact-container div h4 {
-    font-size: 15px;
-    font-weight: bold;
-  }
-  footer div.footer-container div.info-container .contact-container div span {
-    display: block;
+  footer div.footer-container div.info-container div.header-footer-container {
     width: 100%;
   }
-  footer div.footer-container div.info-container .contact-container div .direction {
-    margin-top: 10px;
-    width: fit-content;
+  footer div.footer-container div.info-container .contato-container {
+    width: 100%;
+    display: block;
   }
-  footer div.footer-container div.info-container .contact-container div .direction:hover {
-    color: yellow;
-    text-decoration: underline;
-    cursor: pointer;
+  footer div.footer-container div.info-container .contato-container .visit-us {
+    margin-top: 20px;
+    text-align: left;
   }
 }
 

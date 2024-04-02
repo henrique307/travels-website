@@ -1,0 +1,55 @@
+:root {
+  --font-size--small: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.353), 1.0625rem);
+  --font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.37), 1.25rem);
+  --font-size--large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.37), 2rem);
+  --font-size--x-large: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 0.741), 3rem);
+}
+
+main section.contato {
+  padding: 8rem 0;
+  width: 90%;
+  margin: 0 auto;
+}
+main section.contato h1 {
+  margin-bottom: 30px;
+  font-size: var(--font-size--x-large);
+}
+main section.contato span {
+  font-size: var(--font-size--medium);
+  opacity: 0.8;
+}
+main section.contato form {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+main section.contato form div {
+  display: flex;
+  flex-direction: column;
+}
+main section.contato form input, main section.contato form textarea {
+  padding: 15px;
+}
+main section.contato button {
+  max-width: 120px;
+}
+main section.contato .invisivel {
+  display: none;
+}
+main section.contato .visivel {
+  display: block;
+}
+main section.contato .erro {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+main section.contato .obrigado {
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px;
+  color: green;
+  background-color: rgb(188, 255, 189);
+}
+
+/*# sourceMappingURL=contato.css.map */

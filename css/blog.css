@@ -1,0 +1,47 @@
+:root {
+  --font-size--small: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.353), 1.0625rem);
+  --font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.37), 1.25rem);
+  --font-size--large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.37), 2rem);
+  --font-size--x-large: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 0.741), 3rem);
+}
+
+main {
+  padding: 50px 0;
+}
+main section.blog h1 {
+  font-size: var(--font-size--x-large);
+}
+main section.blog div.cards-container .card h4 {
+  font-size: var(--font-size--large);
+}
+main section.blog div.cards-container .card section {
+  font-size: var(--font-size--medium);
+}
+main section.follow {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffe24a;
+  color: #131313;
+  width: 90%;
+  padding: 40px;
+  margin: 0 auto;
+}
+main section.follow h1 {
+  font-weight: bold;
+  font-size: var(--font-size--x-large);
+}
+main section.follow span {
+  font-size: var(--font-size--large);
+}
+main section.follow button {
+  background-color: black;
+  border: none;
+  width: 130px;
+  padding: 10px;
+}
+main section.follow button:hover {
+  background-color: black;
+}
+
+/*# sourceMappingURL=blog.css.map */
