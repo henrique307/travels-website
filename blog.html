@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../css/blog.css">
     <script type="module" src="../js/index.js"></script>
     <title>Blog</title>
 </head>
@@ -13,21 +13,21 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="../index.html" class="logo-container">
+            <a href="index.html" class="logo-container">
                 <span class="logo">Hevor</span>
                 <span class="catch-phrase">Viagens simples</span>
             </a>
             <nav class="navigation">
                 <div class="nav-mobile-logo">
-                    <a href="../index.html" class="nav-mobile-logo-container">
+                    <a href="index.html" class="nav-mobile-logo-container">
                         <span class="logo">Hevor</span>
                         <span class="catch-phrase">Viagens simples</span>
                     </a>
                     <span class="close">x</span>
                 </div>
                 <a class="nav-item" href="sobre.html">Sobre</a>
-                <a class="nav-item" href="blog.html">Blog</a>
-                <a class="nav-item" href="#">Contato</a>
+                <a class="nav-item" href="#">Blog</a>
+                <a class="nav-item" href="contato.html">Contato</a>
                 <a class="nav-item" href="journey.html">Nossa jornada</a>
                 <div class="mobile-socials socials">
                     <img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="instagram">
@@ -49,28 +49,45 @@
     </header>
 
     <main>
-        <section class="contato">
-            <h1>Fale conosco 👋</h1>
-            <span>Não hesite em entrar em contato com as informações abaixo ou enviar uma mensagem usando o
-                formulário.</span>
-            <p class="obrigado invisivel">Obrigado pelo contato!</p>
-            <form class="formulario">
-                <div>
-                    <label for="nome">Nome*</label>
-                    <span class="invisivel erro">este campo deve ser preenchido</span>
-                    <input type="text" aria-label="nome" class="nome-input obrigatorio" id="nome">
+        <section class="blog">
+            <div class="blog-container">
+                <div class="title-container">
+                    <h1>Blog</h1>
                 </div>
-                <div>
-                    <label for="email">Email*</label>
-                    <span class="invisivel erro">este campo deve ser preenchido</span>
-                    <input type="email" aria-label="email" class="email-input obrigatorio" id="email">
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="https://hevordemo.files.wordpress.com/2023/11/post_3.jpg?w=1024" alt="doctor"><span>13
+                            de Novembro, 2023</span>
+                        <h4>Tudo sobre medicina e saúde do viajante.</h4>
+                        <article>Viajar pelo mundo é uma experiência emocionante, mas vem com a responsabilidade de
+                            priorizar sua saúde. Aqui está um guia essencial sobre medicina para viajantes.
+                        </article>
+                    </div>
+                    <div class="card">
+                        <img src="https://hevordemo.files.wordpress.com/2023/11/post_2.jpg?w=1024"
+                            alt="planice"><span>13 de Novembro,
+                            2023</span>
+                        <h4>O que levar para um país do Sudeste Asiático</h4>
+                        <article>Um vibrante mosaico de culturas, paisagens deslumbrantes e gastronomia deliciosa. Para
+                            garantir uma experiência tranquila e agradável, fazer as malas estrategicamente é
+                            fundamental. </article>
+                    </div>
+                    <div class="card">
+                        <img src="https://hevordemo.files.wordpress.com/2023/11/post_1.jpg?w=1024"
+                            alt="aeroporto"><span>13 de Novembro, 2023</span>
+                        <h4>Um guia para iniciantes sobre todos os aspectos do seguro viagem</h4>
+                        <article>Viajar para novos destinos é uma experiência emocionante, mas é essencial estar
+                            preparado para o inesperado. Se você é novo no mundo do seguro viagem, aqui está um guia
+                            útil para começar. </article>
+                    </div>
                 </div>
-                <div>
-                    <label for="mensagem">Mensagem</label>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
-                </div>
-                <button type="submit" class="btn btn-warning">Enviar</button>
-            </form>
+            </div>
+        </section>
+
+        <section class="follow">
+            <h1>Siga nosso Blog</h1>
+            <span>Receba conteudo do nosso blog diretamente no seu email</span>
+            <button class="btn btn-primary">Seguir</button>
         </section>
     </main>
 
@@ -78,7 +95,7 @@
         <div class="footer-container">
             <div class="info-container">
                 <div class="header-footer-container">
-                    <a href="../index.html"><span class="logo">Hevor</span></a>
+                    <a href="index.html"><span class="logo">Hevor</span></a>
                     <article>A agência de viagens mais incrível que se adapta aos seus interesses únicos, garantindo que
                         você encontre o destino dos seus sonhos que você tanto deseja.</article>
                 </div>
@@ -100,8 +117,8 @@
                 <span>©Henrique Florencio 2024</span>
                 <div class="map">
                     <a href="sobre.html">Sobre Nós</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="#">Contato</a>
+                    <a href="#">Blog</a>
+                    <a href="contato.html">Contato</a>
                     <a href="journey.html">Nossas Jornadas</a>
                 </div>
             </div>
@@ -114,7 +131,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>

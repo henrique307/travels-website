@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/journey.css">
+    <link rel="stylesheet" href="../css/contato.css">
     <script type="module" src="../js/index.js"></script>
     <title>Blog</title>
 </head>
@@ -13,13 +13,13 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="../index.html" class="logo-container">
+            <a href="index.html" class="logo-container">
                 <span class="logo">Hevor</span>
                 <span class="catch-phrase">Viagens simples</span>
             </a>
             <nav class="navigation">
                 <div class="nav-mobile-logo">
-                    <a href="../index.html" class="nav-mobile-logo-container">
+                    <a href="index.html" class="nav-mobile-logo-container">
                         <span class="logo">Hevor</span>
                         <span class="catch-phrase">Viagens simples</span>
                     </a>
@@ -27,8 +27,8 @@
                 </div>
                 <a class="nav-item" href="sobre.html">Sobre</a>
                 <a class="nav-item" href="blog.html">Blog</a>
-                <a class="nav-item" href="contato.html">Contato</a>
-                <a class="nav-item" href="#">Nossa jornada</a>
+                <a class="nav-item" href="#">Contato</a>
+                <a class="nav-item" href="journey.html">Nossa jornada</a>
                 <div class="mobile-socials socials">
                     <img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="instagram">
                     <img src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png" alt="instagram">
@@ -49,28 +49,28 @@
     </header>
 
     <main>
-        <section class="jornada">
-            <h1>Nossos destinos</h1>
-            <span>
-                Seja viajando sozinho, planejando uma escapada familiar ou buscando um refúgio romântico, você pode contar conosco para criar itinerários personalizados que vão além das suas expectativas.
-            </span>
-            <div class="destinos">
+        <section class="contato">
+            <h1>Fale conosco 👋</h1>
+            <span>Não hesite em entrar em contato com as informações abaixo ou enviar uma mensagem usando o
+                formulário.</span>
+            <p class="obrigado invisivel">Obrigado pelo contato!</p>
+            <form class="formulario">
                 <div>
-                    <img src="https://afar.brightspotcdn.com/dims4/default/5af1313/2147483647/strip/true/crop/3000x1592+0+323/resize/1440x764!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fb2%2Ff4%2F9a1ebe3f427f8e5eb937f8df8998%2Ftravelguides-maldives-videomediastudioeurope-shutterstock.jpg" alt="paisagem">
-                    <h1>Maldivas</h1>
-                    <button class="btn btn-warning">Ver destino</button>
+                    <label for="nome">Nome*</label>
+                    <span class="invisivel erro">este campo deve ser preenchido</span>
+                    <input type="text" aria-label="nome" class="nome-input obrigatorio" id="nome">
                 </div>
                 <div>
-                    <img src="https://lh4.googleusercontent.com/proxy/Inm52L682IJj7wOZuQTDBMjAHALO1AhBuvrazjDkCeXTlPdYx0suLc4QrEkh5qd4wGB24QTuvhrLnuE_5DNv64EP4L5FopvrDQj9PN56OaAdPGX1KZBg7EpZk1LBLK3RzJEsMuEXCU0H_usMeeBOX7wiFdwjvQ=w675-h390-n-k-no" alt="paisagem">
-                    <h1>Seichelles</h1>
-                    <button class="btn btn-warning">Ver destino</button>
+                    <label for="email">Email*</label>
+                    <span class="invisivel erro">este campo deve ser preenchido</span>
+                    <input type="email" aria-label="email" class="email-input obrigatorio" id="email">
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcR0vAq-LckSsoQX3yR6BCXMa7EMTvcKVRNS9ZNs-mTV1uHerG6KwDnK_zI4des8pvfTimt9_Q_rO0u4DW5edeMfJ2DISR_Rvn3HSbi2yg" alt="paisagem">
-                    <h1>Bali</h1>
-                    <button class="btn btn-warning">Ver destino</button>
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
                 </div>
-            </div>
+                <button type="submit" class="btn btn-warning">Enviar</button>
+            </form>
         </section>
     </main>
 
@@ -78,7 +78,7 @@
         <div class="footer-container">
             <div class="info-container">
                 <div class="header-footer-container">
-                    <a href="../index.html"><span class="logo">Hevor</span></a>
+                    <a href="index.html"><span class="logo">Hevor</span></a>
                     <article>A agência de viagens mais incrível que se adapta aos seus interesses únicos, garantindo que
                         você encontre o destino dos seus sonhos que você tanto deseja.</article>
                 </div>
@@ -101,8 +101,8 @@
                 <div class="map">
                     <a href="sobre.html">Sobre Nós</a>
                     <a href="blog.html">Blog</a>
-                    <a href="contato.html">Contato</a>
-                    <a href="#">Nossas Jornadas</a>
+                    <a href="#">Contato</a>
+                    <a href="journey.html">Nossas Jornadas</a>
                 </div>
             </div>
         </div>
