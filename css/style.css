@@ -97,12 +97,11 @@ header div.header-container div.socials img {
   position: relative;
   width: 20px;
   height: 20px;
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s scale;
   cursor: pointer;
 }
 header div.header-container div.socials img:hover {
-  width: 23px;
-  height: 23px;
+  scale: 1.05;
 }
 header div.header-container .mobile-trigger {
   display: none;

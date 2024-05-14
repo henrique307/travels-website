@@ -1,0 +1,56 @@
+:root {
+    --font-size--small: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.353), 1.0625rem);
+    --font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.37), 1.25rem);
+    --font-size--large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.37), 2rem);
+    --font-size--x-large: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 0.741), 3rem);
+}
+
+main {
+    section.blog {
+        h1 {
+            font-size: var(--font-size--x-large);
+        }
+
+        div.cards-container .card {
+            h4 {
+                font-size: var(--font-size--large);
+            }
+            
+            section {
+                font-size: var(--font-size--medium);
+            }
+        }
+    }
+
+    section.follow {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #ffe24a;
+        color: #131313;
+        width: 90%;
+        padding: 40px;
+        margin: 0 auto;
+
+        h1 {
+            font-weight: bold;
+            font-size: var(--font-size--x-large)
+        }
+        
+        span {
+            font-size: var(--font-size--large)
+        }
+
+        button {
+            background-color: black;
+            border: none;
+            width: 130px;
+            padding: 10px;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+    }
+    padding: 50px 0;
+}

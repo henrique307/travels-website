@@ -1,0 +1,36 @@
+:root {
+    --font-size--small: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.353), 1.0625rem);
+    --font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.37), 1.25rem);
+    --font-size--large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.37), 2rem);
+    --font-size--x-large: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 0.741), 3rem);
+}
+
+main {
+    section.about {
+        padding-top: 5rem;
+        width: 90%;
+        margin: 0 auto;
+
+        img {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .text-container {
+            max-width: 800px;
+            margin: 0 auto;
+            h1 {
+                margin: 20px 0;
+                font-weight: bold;
+                font-size: var(--font-size--x-large);
+            }
+    
+            article {
+                opacity: 0.8;
+                margin-bottom: 70px;
+                font-size: var(--font-size--medium);
+            }
+        }
+
+    }
+}

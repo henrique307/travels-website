@@ -1,0 +1,57 @@
+
+:root {
+    --font-size--small: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.353), 1.0625rem);
+    --font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.37), 1.25rem);
+    --font-size--large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.37), 2rem);
+    --font-size--x-large: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 0.741), 3rem);
+}
+
+main {
+    section.jornada {
+        width: 90%;
+        padding: 6rem 0;
+        margin: 0 auto;
+
+        h1 {
+            font-size: var(--font-size--x-large);
+            margin-bottom: 20px;
+        }
+
+        span {
+            opacity: .8;
+        }
+        
+        div.destinos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+
+            div {
+                img {
+                    height: 50%;
+                    margin-top: 40px;
+                    width: 100%;
+                }
+                
+                h1 {
+                    margin-top: 20px;
+                    font-size: var(--font-size--large);
+                }
+
+                button {
+                    padding: 10px 20px;
+                    border: 2px solid yellow;
+                }
+
+                button:hover {
+                    color: white;
+                    background-color: black;
+                }
+            }
+
+            @media (width < 800px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
